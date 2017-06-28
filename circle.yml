@@ -31,3 +31,7 @@ test:
             timeout: 360
         # copy the build outputs to artifacts
         - cp -r app/build/outputs $CIRCLE_ARTIFACTS
+        
+checkout:
+   post:  
+        - cp -r licenses/. $ANDROID_HOME/licenses
